@@ -7,7 +7,21 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <h1>Encuesta</h1>
+    <header>
+        <div class="logo">BinaryBesties</div>
+        <nav>
+            <a href="index.html">Regresar a inicio</a>
+            <a href="nosotros.html">Quiénes somos</a>
+        </nav>
+    </header>
+    <h1 style="text-align: center;">Estás muy cerca de conocer a tu match perfecto...</h1>
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="#section1" class="category-link">Nombre</a>
+        <a href="#section2" class="category-link">Datos generales</a>
+        <a href="#section3" class="category-link">Personalidad y gustos personales</a>
+        <a href="#section4" class="category-link">Creencias</a>
+    </div>
+
     <form id="surveyForm" onsubmit="return false">
 
         <div class="question-section">
@@ -17,7 +31,7 @@
 
         <div class="question-section">
             <div>
-                <label for="ageRange">Rango de Edad:</label>
+                <label for="ageRange">¿Cuál es tu rango de edad?</label>
                 <select id="ageRange" name="ageRange">
                     <option value="0.1">Menor de 18</option>
                     <option value="0.2">18-25</option>
@@ -27,7 +41,7 @@
                 </select>
             </div>
             <div>
-                <label for="gender">Género:</label>
+                <label for="gender"> ¿Cuál es tu género?</label>
                 <select id="gender" name="gender">
                     <option value="0.1">Femenino</option>
                     <option value="0.2">Masculino</option>
@@ -35,7 +49,7 @@
                 </select>
             </div>
             <div>
-                <label for="educationLevel">Nivel educativo:</label>
+                <label for="educationLevel">¿Cuál es tu nivel educativo actualmente (El grado en el que te encuentras)?</label>
                 <select id="educationLevel" name="educationLevel">
                     <option value="0.1">Primaria (Básica)</option>
                     <option value="0.2">Básica-Media (Secundaria)</option>
@@ -45,7 +59,7 @@
                 </select>
             </div>
             <div>
-                <label for="occupation">Ocupación:</label>
+                <label for="occupation">¿Cuál es tu ocupación actual?</label>
                 <select id="occupation" name="occupation">
                     <option value="0.1">Estudiante</option>
                     <option value="0.2">Trabajador</option>
@@ -53,7 +67,7 @@
                 </select>
             </div>
             <div>
-                <label for="personalityPhysical">Personalidad física:</label>
+                <label for="personalityPhysical">¿Qué tan introvertido o extrovertido te consideras?</label>
                 <select id="personalityPhysical" name="personalityPhysical">
                     <option value="0.1">Muy Introvertid@</option>
                     <option value="0.2">Medianamente Introvertid@</option>
@@ -66,7 +80,7 @@
         <div class="question-section" style="display: none;">
             
             <div>
-                <label for="personalityMental">Personalidad mental:</label>
+                <label for="personalityMental">¿Cuál consideras que te describe mejor?</label>
                 <select id="personalityMental" name="personalityMental">
                     <option value="0.1">Muy calmad@</option>
                     <option value="0.2">Medianamente calmad@</option>
@@ -76,7 +90,7 @@
                 </select>
             </div>
             <div>
-                <label for="personalFocus">Enfoque personal:</label>
+                <label for="personalFocus">¿Cuál es tu prioridad actualmente?</label>
                 <select id="personalFocus" name="personalFocus">
                     <option value="0.1">Familia</option>
                     <option value="0.2">Amigos</option>
@@ -86,7 +100,7 @@
                 </select>
             </div>
             <div>
-                <label for="sportsActivity">Actividad deportiva:</label>
+                <label for="sportsActivity">¿Cuál consideras que es tu actividad deportiva?</label>
                 <select id="sportsActivity" name="sportsActivity">
                     <option value="0.1">Nula</option>
                     <option value="0.2">Leve</option>
@@ -96,7 +110,7 @@
                 </select>
             </div>
             <div>
-                <label for="travelPreference">Gusto por viajar:</label>
+                <label for="travelPreference">¿Qué tanto te gusta viajar?</label>
                 <select id="travelPreference" name="travelPreference">
                     <option value="0.1">Nada</option>
                     <option value="0.2">Muy poco</option>
@@ -106,7 +120,7 @@
                 </select>
             </div>
             <div>
-                <label for="animePreference">Gusto por ver animes:</label>
+                <label for="animePreference">¿Te gusta ver animes?</label>
                 <select id="animePreference" name="animePreference">
                     <option value="0.1">Nada</option>
                     <option value="0.2">Muy poco</option>
@@ -119,7 +133,7 @@
         <div class="question-section" style="display: none;">
             
             <div>
-                <label for="videogamePreference">Gusto por videojuegos:</label>
+                <label for="videogamePreference">¿Te gustan los videojuegos?</label>
                 <select id="videogamePreference" name="videogamePreference">
                     <option value="0.1">Nada</option>
                     <option value="0.2">Muy poco</option>
@@ -129,7 +143,7 @@
                 </select>
             </div>
             <div>
-                <label for="musicPreference">Gusto por la música:</label>
+                <label for="musicPreference">¿Qué género de música te gusta más?</label>
                 <select id="musicPreference" name="musicPreference">
                     <option value="0.1">Pop</option>
                     <option value="0.2">Rock</option>
@@ -139,7 +153,7 @@
                 </select>
             </div>
             <div>
-                <label for="beliefHoroscope">Creencias:</label>
+                <label for="beliefHoroscope">¿Crees en los horóscopos?</label>
                 <select id="beliefHoroscope" name="beliefHoroscope">
                     <option value="0.1">Nada</option>
                     <option value="0.2">Muy poco</option>
@@ -149,7 +163,7 @@
                 </select>
             </div>
             <div>
-                <label for="religion">Religión:</label>
+                <label for="religion"> ¿Eres creyente de alguna religión?</label>
                 <select id="religion" name="religion">
                     <option value="0.1">Ateo</option>
                     <option value="0.2">Cristiano</option>
@@ -159,7 +173,7 @@
                 </select>
             </div>
             <div>
-                <label for="familyAttachment">Apego a la familia:</label>
+                <label for="familyAttachment"> ¿Qué tan allegado a tu familia eres?</label>
                 <select id="familyAttachment" name="familyAttachment">
                     <option value="0.1">Nada</option>
                     <option value="0.2">Muy poco</option>
@@ -172,7 +186,7 @@
         <div class="question-section" style="display: none;">
             
             <div>
-                <label for="moviePreference">Gusto por el cine:</label>
+                <label for="moviePreference">¿Qué tanto te gusta el cine?</label>
                 <select id="moviePreference" name="moviePreference">
                     <option value="0.1">Nada</option>
                     <option value="0.2">Muy poco</option>
@@ -182,7 +196,7 @@
                 </select>
             </div>
             <div>
-                <label for="readingPreference">Gusto por leer:</label>
+                <label for="readingPreference">¿Qué tanto te gusta leer?</label>
                 <select id="readingPreference" name="readingPreference">
                     <option value="0.1">Nada</option>
                     <option value="0.2">Muy poco</option>
@@ -192,7 +206,7 @@
                 </select>
             </div>
             <div>
-                <label for="friendshipImportance">Importancia de la amistad:</label>
+                <label for="friendshipImportance">¿Del 1 al 5 qué tanta importancia le das a las amistades?</label>
                 <select id="friendshipImportance" name="friendshipImportance">
                     <option value="0.1">1</option>
                     <option value="0.2">2</option>
@@ -202,7 +216,7 @@
                 </select>
             </div>
             <div>
-                <label for="petPreference">Gusto por mascotas:</label>
+                <label for="petPreference">¿Qué animal prefieres tener de mascota?</label>
                 <select id="petPreference" name="petPreference">
                     <option value="0.1">Gatos</option>
                     <option value="0.2">Perros</option>
@@ -212,7 +226,7 @@
                 </select>
             </div>
             <div>
-                <label for="healthCareImportance">Importancia del cuidado de la salud:</label>
+                <label for="healthCareImportance">¿Del 1 al 5 qué tanta importancia le das a el cuidado de tu salud?</label>
                 <select id="healthCareImportance" name="healthCareImportance">
                     <option value="0.1">1</option>
                     <option value="0.2">2</option>
@@ -221,6 +235,8 @@
                     <option value="0.5">5</option>
                 </select>
             </div>
+            <button onclick="previousSection()">Regresar</button>
+            <button id="submitButton" onclick="submitForm()">Enviar</button>
         </div>
 
         <div id="navigationButtons">
@@ -230,6 +246,7 @@
         <button id="submitButton" style="display: none;" onclick="submitForm()">Enviar</button>
     </form>
 
+    <script src="assets/js/app.js" defer></script>
     <script src="assets/js/app.js" defer></script>
     <script>
         var currentSectionIndex = 0;
@@ -247,8 +264,10 @@
 
             if (index === sections.length - 1) {
                 submitButton.style.display = 'block';
+                document.getElementById('navigationButtons').style.display = 'none';
             } else {
                 submitButton.style.display = 'none';
+                document.getElementById('navigationButtons').style.display = 'block';
             }
         }
 
@@ -269,7 +288,7 @@
         function submitForm() {
             // Aquí puedes agregar lógica para enviar el formulario
             // Redirecciona a results.html
-            window.location.href = "results.html";
+            window.location.href = "resultados.html";
         }
 
         // Mostrar la primera sección al cargar la página

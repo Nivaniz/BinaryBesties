@@ -1,69 +1,107 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #f2f2f2;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #FF4141;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: Consolas, monospace;
+    animation: typing 2s steps(15) infinite;
+}
+
+
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
 }
 
 h1 {
     text-align: center;
-    margin-top: 30px;
-    color: #4285f4; /* Color azul de Google */
+    margin-top: 20px;
 }
 
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.category-link {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.category-link:hover {
+    color: #FF4141;
 }
 
 .question-section {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    display: none;
 }
 
-label {
+.question-section label {
     display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #555;
+    margin-bottom: 10px;
 }
 
-input[type="text"],
-select {
+.question-section select,
+.question-section input[type="text"] {
     width: 100%;
     padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-top: 5px;
 }
 
-#navigationButtons {
-    text-align: right;
-}
-
-button {
+.question-section button {
     padding: 10px 20px;
-    background-color: #4285f4; /* Color azul de Google */
+    background-color: #FF4141;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
     transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #357ae8; /* Color azul más oscuro de Google */
+.question-section button:hover {
+    background-color: #e60000;
 }
 
 #submitButton {
-    margin-top: 20px;
-    background-color: #0f9d58; /* Color verde de Google */
+    float: right;
 }
 
-#submitButton:hover {
-    background-color: #0a7d41; /* Color verde más oscuro de Google */
+#submitButton:last-of-type {
+    display: none;
+}
+
+#navigationButtons {
+    text-align: center;
+}
+
+#navigationButtons button {
+    margin: 0 10px;
 }

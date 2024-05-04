@@ -3,15 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultados de la Encuesta</title>
+    <title>¡Felicidades!</title>
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <h1>Resultados de la Encuesta</h1>
-    <div>
-        <p>¡Gracias por completar la encuesta!</p>
-        <p>Aquí puedes mostrar los resultados de acuerdo a tus necesidades.</p>
-        <!-- Inserta aquí tus resultados -->
+    <nav>
+        <a href="index.html">Regresar a inicio</a>
+        <a href="nosotros.html">¿Quiénes somos?</a>
+    </nav>
+    <h1 style="text-align: center;">¡Felicidades has terminado!</h1>
+    <div style="text-align: center;">
+        <p>Tu <span style="color: #FF4141;">match</span> match perfecto es: Miguel</p>
     </div>
+    <div class="profile-container">
+        <img src="/assets/img/img2.jpg" alt="Foto de perfil de Miguel">
+        <div class="profile-details">
+            <p><strong>Miguel</strong></p>
+            <p>Mándale un <span style="color: #4CAF50;">whatsapp</span> a: 442-186-9878</p>
+            <p>Escríbele a su <span style="color: #1877F2;">facebook</span>a: miguel_herrera</p>
+        </div>
+    </div>
+
+    <style>
+        .profile-container {
+            margin: 20px auto;
+            width: 80%;
+            max-width: 600px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-container img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .profile-details {
+            flex-grow: 1;
+        }
+    </style>
 </body>
 </html>

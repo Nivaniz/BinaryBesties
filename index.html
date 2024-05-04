@@ -4,39 +4,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BinaryBesties</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+        }
+
+        header {
+            background-color: #f2f2f2;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
             align-items: center;
+        }
+
+        .logo {
+            color: #FF4141;
+            font-size: 24px;
+            font-weight: 700;
+            font-family: Consolas, monospace;
+            animation: typing 2s steps(15) infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+        }
+
+        nav {
+            display: flex;
+        }
+
+        nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .container {
+            position: relative;
+            flex: 1;
+            display: flex;
+        }
+
+        .left-half {
+            width: 50%;
+            padding: 20px;
+            background-color: #f2f2f2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .right-half {
+            position: relative;
+            width: 50%;
+        }
+
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+        }
+
+        .image {
+            width: 100%;
             height: 100vh;
+            object-fit: cover;
         }
 
-        h1 {
-            text-align: center;
+        .welcome-text {
+            text-align: justify;
+            font-size: 48px;
+            color: #333;
+            margin-bottom: 20px;
         }
 
-        .button {
-            padding: 10px 20px;
-            background-color: #007bff;
+        .about-us {
+            text-align: justify;
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .match-button {
+            padding: 15px 40px;
+            background-color: #FF4141;
             color: #fff;
             border: none;
-            border-radius: 5px;
+            border-radius: 25px;
             cursor: pointer;
             text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            margin-right: auto;
         }
 
-        .button:hover {
-            background-color: #0056b3;
+        .match-button:hover {
+            background-color: #e60000;
         }
     </style>
 </head>
 <body>
-    <h1>BinaryBesties</h1>
-    <a href="main.html" class="button">Averiguar con quién tengo mejor compatibilidad</a>
+    <header>
+        <div class="logo">BinaryBesties</div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Quiénes somos</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="left-half">
+            <h1 class="welcome-text">¡Bienvenid@ a BinaryBesties!</h1>
+            <p class="about-us">Somos un grupo de estudiantes que se esfuerza por tener experiencias significativas y conectar con amigos. Si estás buscando amigos que compartan tus intereses, estás en el lugar correcto. ¡Comienza tu viaje para encontrar tu match ahora!</p>
+            <a href="main.html" class="match-button">Encontrar mi match</a>
+        </div>
+        <div class="right-half">
+            <div class="image-overlay"></div>
+            <img src="assets/img/img1.jpg" alt="Imagen" class="image">
+        </div>
+    </div>
 </body>
 </html>
