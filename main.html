@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <h1>Encuesta</h1>
+    <form id="surveyForm" onsubmit="return false">
+
+        <div class="question-section">
+            <label for="name">Nombre:</label><br>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="question-section">
+            <div>
+                <label for="ageRange">Rango de Edad:</label>
+                <select id="ageRange" name="ageRange">
+                    <option value="0.1">Menor de 18</option>
+                    <option value="0.2">18-25</option>
+                    <option value="0.3">26-33</option>
+                    <option value="0.4">34-41</option>
+                    <option value="0.5">42-49</option>
+                </select>
+            </div>
+            <div>
+                <label for="gender">Género:</label>
+                <select id="gender" name="gender">
+                    <option value="0.1">Femenino</option>
+                    <option value="0.2">Masculino</option>
+                    <option value="0.3">Otro</option>
+                </select>
+            </div>
+            <div>
+                <label for="educationLevel">Nivel educativo:</label>
+                <select id="educationLevel" name="educationLevel">
+                    <option value="0.1">Primaria (Básica)</option>
+                    <option value="0.2">Básica-Media (Secundaria)</option>
+                    <option value="0.3">Media (Preparatoria)</option>
+                    <option value="0.4">Media-Superior (Universidad)</option>
+                    <option value="0.5">Superior (Posgrado)</option>
+                </select>
+            </div>
+            <div>
+                <label for="occupation">Ocupación:</label>
+                <select id="occupation" name="occupation">
+                    <option value="0.1">Estudiante</option>
+                    <option value="0.2">Trabajador</option>
+                    <option value="0.3">Desempleado</option>
+                </select>
+            </div>
+            <div>
+                <label for="personalityPhysical">Personalidad física:</label>
+                <select id="personalityPhysical" name="personalityPhysical">
+                    <option value="0.1">Muy Introvertid@</option>
+                    <option value="0.2">Medianamente Introvertid@</option>
+                    <option value="0.3">Neutro</option>
+                    <option value="0.4">Medianamente Extrovertid@</option>
+                    <option value="0.5">Muy Extrovertid@</option>
+                </select>
+            </div>
+        </div>
+        <div class="question-section" style="display: none;">
+            
+            <div>
+                <label for="personalityMental">Personalidad mental:</label>
+                <select id="personalityMental" name="personalityMental">
+                    <option value="0.1">Muy calmad@</option>
+                    <option value="0.2">Medianamente calmad@</option>
+                    <option value="0.3">Neutro</option>
+                    <option value="0.4">Medianamente nervios@</option>
+                    <option value="0.5">Muy nervios@</option>
+                </select>
+            </div>
+            <div>
+                <label for="personalFocus">Enfoque personal:</label>
+                <select id="personalFocus" name="personalFocus">
+                    <option value="0.1">Familia</option>
+                    <option value="0.2">Amigos</option>
+                    <option value="0.3">Dinero</option>
+                    <option value="0.4">Trabajo</option>
+                    <option value="0.5">Salud</option>
+                </select>
+            </div>
+            <div>
+                <label for="sportsActivity">Actividad deportiva:</label>
+                <select id="sportsActivity" name="sportsActivity">
+                    <option value="0.1">Nula</option>
+                    <option value="0.2">Leve</option>
+                    <option value="0.3">Moderada</option>
+                    <option value="0.4">Alta</option>
+                    <option value="0.5">Profesional</option>
+                </select>
+            </div>
+            <div>
+                <label for="travelPreference">Gusto por viajar:</label>
+                <select id="travelPreference" name="travelPreference">
+                    <option value="0.1">Nada</option>
+                    <option value="0.2">Muy poco</option>
+                    <option value="0.3">Algo</option>
+                    <option value="0.4">Bastante</option>
+                    <option value="0.5">Mucho</option>
+                </select>
+            </div>
+            <div>
+                <label for="animePreference">Gusto por ver animes:</label>
+                <select id="animePreference" name="animePreference">
+                    <option value="0.1">Nada</option>
+                    <option value="0.2">Muy poco</option>
+                    <option value="0.3">Algo</option>
+                    <option value="0.4">Bastante</option>
+                    <option value="0.5">Mucho</option>
+                </select>
+            </div>
+        </div>
+        <div class="question-section" style="display: none;">
+            
+            <div>
+                <label for="videogamePreference">Gusto por videojuegos:</label>
+                <select id="videogamePreference" name="videogamePreference">
+                    <option value="0.1">Nada</option>
+                    <option value="0.2">Muy poco</option>
+                    <option value="0.3">Algo</option>
+                    <option value="0.4">Bastante</option>
+                    <option value="0.5">Mucho</option>
+                </select>
+            </div>
+            <div>
+                <label for="musicPreference">Gusto por la música:</label>
+                <select id="musicPreference" name="musicPreference">
+                    <option value="0.1">Pop</option>
+                    <option value="0.2">Rock</option>
+                    <option value="0.3">Indie</option>
+                    <option value="0.4">Metal</option>
+                    <option value="0.5">Electrónica</option>
+                </select>
+            </div>
+            <div>
+                <label for="beliefHoroscope">Creencias:</label>
+                <select id="beliefHoroscope" name="beliefHoroscope">
+                    <option value="0.1">Nada</option>
+                    <option value="0.2">Muy poco</option>
+                    <option value="0.3">Algo</option>
+                    <option value="0.4">Bastante</option>
+                    <option value="0.5">Mucho</option>
+                </select>
+            </div>
+            <div>
+                <label for="religion">Religión:</label>
+                <select id="religion" name="religion">
+                    <option value="0.1">Ateo</option>
+                    <option value="0.2">Cristiano</option>
+                    <option value="0.3">Católico</option>
+                    <option value="0.4">Mormón</option>
+                    <option value="0.5">Protestante</option>
+                </select>
+            </div>
+            <div>
+                <label for="familyAttachment">Apego a la familia:</label>
+                <select id="familyAttachment" name="familyAttachment">
+                    <option value="0.1">Nada</option>
+                    <option value="0.2">Muy poco</option>
+                    <option value="0.3">Algo</option>
+                    <option value="0.4">Bastante</option>
+                    <option value="0.5">Mucho</option>
+                </select>
+            </div>
+        </div>
+        <div class="question-section" style="display: none;">
+            
+            <div>
+                <label for="moviePreference">Gusto por el cine:</label>
+                <select id="moviePreference" name="moviePreference">
+                    <option value="0.1">Nada</option>
+                    <option value="0.2">Muy poco</option>
+                    <option value="0.3">Algo</option>
+                    <option value="0.4">Bastante</option>
+                    <option value="0.5">Mucho</option>
+                </select>
+            </div>
+            <div>
+                <label for="readingPreference">Gusto por leer:</label>
+                <select id="readingPreference" name="readingPreference">
+                    <option value="0.1">Nada</option>
+                    <option value="0.2">Muy poco</option>
+                    <option value="0.3">Algo</option>
+                    <option value="0.4">Bastante</option>
+                    <option value="0.5">Mucho</option>
+                </select>
+            </div>
+            <div>
+                <label for="friendshipImportance">Importancia de la amistad:</label>
+                <select id="friendshipImportance" name="friendshipImportance">
+                    <option value="0.1">1</option>
+                    <option value="0.2">2</option>
+                    <option value="0.3">3</option>
+                    <option value="0.4">4</option>
+                    <option value="0.5">5</option>
+                </select>
+            </div>
+            <div>
+                <label for="petPreference">Gusto por mascotas:</label>
+                <select id="petPreference" name="petPreference">
+                    <option value="0.1">Gatos</option>
+                    <option value="0.2">Perros</option>
+                    <option value="0.3">Hamsters o ratones</option>
+                    <option value="0.4">Pájaros</option>
+                    <option value="0.5">Otro</option>
+                </select>
+            </div>
+            <div>
+                <label for="healthCareImportance">Importancia del cuidado de la salud:</label>
+                <select id="healthCareImportance" name="healthCareImportance">
+                    <option value="0.1">1</option>
+                    <option value="0.2">2</option>
+                    <option value="0.3">3</option>
+                    <option value="0.4">4</option>
+                    <option value="0.5">5</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="navigationButtons">
+            <button onclick="previousSection()">Atrás</button>
+            <button onclick="nextSection()">Siguiente</button>
+        </div>
+        <button id="submitButton" style="display: none;" onclick="submitForm()">Enviar</button>
+    </form>
+
+    <script src="assets/js/app.js" defer></script>
+    <script>
+        var currentSectionIndex = 0;
+        var sections = document.getElementsByClassName('question-section');
+        var submitButton = document.getElementById('submitButton');
+
+        function showSection(index) {
+            for (var i = 0; i < sections.length; i++) {
+                if (i === index) {
+                    sections[i].style.display = 'block';
+                } else {
+                    sections[i].style.display = 'none';
+                }
+            }
+
+            if (index === sections.length - 1) {
+                submitButton.style.display = 'block';
+            } else {
+                submitButton.style.display = 'none';
+            }
+        }
+
+        function previousSection() {
+            if (currentSectionIndex > 0) {
+                currentSectionIndex--;
+                showSection(currentSectionIndex);
+            }
+        }
+
+        function nextSection() {
+            if (currentSectionIndex < sections.length - 1) {
+                currentSectionIndex++;
+                showSection(currentSectionIndex);
+            }
+        }
+
+        function submitForm() {
+            // Aquí puedes agregar lógica para enviar el formulario
+            // Redirecciona a results.html
+            window.location.href = "results.html";
+        }
+
+        // Mostrar la primera sección al cargar la página
+        showSection(currentSectionIndex);
+    </script>
+</body>
+</html>
