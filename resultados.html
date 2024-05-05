@@ -4,42 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>¡Felicidades!</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
-<body>
-    <nav>
-        <a href="index.html">Regresar a inicio</a>
-        <a href="nosotros.html">¿Quiénes somos?</a>
-    </nav>
-    <h1 style="text-align: center;">¡Felicidades has terminado!</h1>
-    <div style="text-align: center;">
-        <p>Tu <span style="color: #FF4141;">match</span> match perfecto es: Miguel</p>
-    </div>
-    <div class="profile-container">
-        <img src="/assets/img/img2.jpg" alt="Foto de perfil de Miguel">
-        <div class="profile-details">
-            <p><strong>Miguel</strong></p>
-            <p>Mándale un <span style="color: #4CAF50;">whatsapp</span> a: 442-186-9878</p>
-            <p>Escríbele a su <span style="color: #1877F2;">facebook</span>a: miguel_herrera</p>
-        </div>
-    </div>
-
     <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            background-color: #f2f2f2; /* Color de fondo */
+            color: #333; /* Color de texto */
+        }
+
+        header {
+            background-color: #f2f2f2;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 100px; /* Ajusta el tamaño del logo */
+            height: auto;
+            margin-left: 10px; /* Ajusta el margen izquierdo */
+        }
+
+        nav {
+            display: flex;
+        }
+
+        nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #333;
+            position: relative;
+            font-weight: normal; /* Peso de la fuente en negrita */
+            font-size: 18px; /* Tamaño de la fuente */
+        }
+
+        nav a:hover {
+            font-weight: bold;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: transparent;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover::after {
+            background-color: #ff69b4;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px; /* Tamaño de la fuente */
+            font-weight: bold; /* Peso de la fuente en negrita */
+        }
+
+        .nombre {
+            align-items: left;
+            font-size: 38px; /* Tamaño de fuente base */
+            font-weight: bold;
+            padding-bottom: 10px;
+            margin-top: 15px;
+        }
+
+        .redes {
+            align-items: left;
+            font-size: 28px;
+        }
+
+        .match {
+            margin-left: 620px;/* Centrar el contenedor horizontalmente */
+            width: 60%; /* Establecer un ancho del contenedor */
+            max-width: 800px; /* Establecer un ancho máximo */
+            font-size: 38px; /* Tamaño de fuente base */
+            font-weight: bold;
+        }
+
         .profile-container {
             margin: 20px auto;
-            width: 80%;
-            max-width: 600px;
+            width: calc(50% - 20px); /* Ancho del 100% del viewport menos 40px */
+            height: calc(50% - 20px); /* Ancho del 100% del viewport menos 40px */
             background-color: #ffffff;
-            border-radius: 10px;
+            border-radius: 20px; /* Bordes más redondeados */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
+            padding: 30px;
             display: flex;
             align-items: center;
         }
 
         .profile-container img {
-            width: 100px;
-            height: 100px;
+            width: 250px;
+            height: 250px;
             border-radius: 50%;
             margin-right: 20px;
         }
@@ -48,5 +111,29 @@
             flex-grow: 1;
         }
     </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/img/logobinary.png" alt="BinaryBesties Logo">
+        </div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">¿Quiénes somos?</a>
+        </nav>
+    </header>
+    <h1>¡Felicidades has terminado!</h1>
+    <div>
+        <p class="match">Tu <span style="color: #FF4141;">match</span> match perfecto es: Miguel</p>
+    </div>
+    <div class="profile-container">
+        <img src="/assets/img/img2.jpg" alt="Foto de perfil de Miguel">
+        <div class="profile-details">
+            <p class="nombre"><strong>Miguel</strong></p>
+            <p class="redes">Mándale un <span style="color: #4CAF50;">whatsapp</span> a: 442-186-9878</p>
+            <p class="redes">Escríbele a su <span style="color: #1877F2;">facebook</span> a: miguel_herrera</p>
+        </div>
+    </div>
 </body>
 </html>
+

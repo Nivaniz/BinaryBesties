@@ -14,51 +14,115 @@ header {
     align-items: center;
 }
 
-.logo {
-    color: #FF4141;
-    font-size: 24px;
-    font-weight: 700;
-    font-family: Consolas, monospace;
-    animation: typing 2s steps(15) infinite;
+.logo img {
+    width: 100px; /* Ajusta el tamaño del logo */
+    height: auto;
+    margin-left: 10px; /* Ajusta el margen izquierdo */
 }
 
-
 nav {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
+    display: flex;
 }
 
 nav a {
-    color: #fff;
+    margin-right: 20px;
     text-decoration: none;
-    margin: 0 10px;
+    color: #333;
+    position: relative;
+    font-weight: normal;
 }
 
-h1 {
-    text-align: center;
-    margin-top: 20px;
+nav a:hover {
+    font-weight: bold;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover::after {
+    background-color: #ff69b4;
 }
 
 .category-link {
     color: #333;
     text-decoration: none;
     margin: 0 10px;
+    position: relative; /* Agrega posición relativa para poder posicionar el círculo */
 }
 
-.category-link:hover {
-    color: #FF4141;
+.category-link::before {
+    content: '';
+    position: absolute;
+    top: -8px; /* Ajusta la posición del círculo */
+    left: 50%; /* Coloca el círculo en el centro horizontal */
+    transform: translateX(-50%); /* Centra el círculo horizontalmente */
+    width: 10px; /* Ajusta el tamaño del círculo */
+    height: 10px; /* Ajusta el tamaño del círculo */
+    background-color: transparent; /* Establece el color del círculo transparente por defecto */
+    border-radius: 50%; /* Hace que el círculo sea redondeado */
+    transition: background-color 0.3s ease; /* Agrega una transición suave */
 }
+
+.category-link:hover::before,
+.category-link.active::before {
+    background-color: #ff69b4; /* Cambia el color del círculo a rosa cuando se está encima o activo */
+}
+
+/* Ajusta los estilos para que los botones sean iguales a .match-button */
+.category-link,
+.question-section button {
+    padding: 15px 40px;
+    background-color: #F48ECD;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    margin-right: auto;
+    margin-top: 40px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.category-link:hover,
+.question-section button:hover {
+    background-color: #e84fad;
+}
+
+.welcome-text {
+    text-align: justify;
+    font-size: 48px;
+    color: #fff; /* Cambia el color del texto a blanco */
+    margin-bottom: 20px;
+    margin-top: 10px;
+    background-color: #F48ECD;
+    border-radius: 80px; /* Agrega bordes redondeados */
+    padding: 20px; /* Agrega un poco de espacio alrededor del texto */
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
 
 .question-section {
     background-color: #f2f2f2;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 80px; /* Aumenta el padding para que no esté tan pegado a las orillas */
+    border-radius: 15px; /* Ajusta el radio de los bordes para hacerlos más redondeados */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     display: none;
+    margin-left: 40px;
+    margin-right: 40px;
 }
+
 
 .question-section label {
     display: block;
@@ -75,33 +139,51 @@ h1 {
 }
 
 .question-section button {
-    padding: 10px 20px;
-    background-color: #FF4141;
+    padding: 15px 40px;
+    background-color: #F48ECD;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
     transition: background-color 0.3s ease;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-left: 10px; /* Ajusta el margen izquierdo */
+    margin-bottom: 10px; /* Ajusta el margen inferior */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+
 .question-section button:hover {
-    background-color: #e60000;
+    background-color: #ff69b4;
 }
 
 #submitButton {
     float: right;
-}
-
-#submitButton:last-of-type {
-    display: none;
+    margin-top: 20px; /* Agrega un poco de espacio arriba del botón Enviar */
 }
 
 #navigationButtons {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 #navigationButtons button {
-    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #F48ECD;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin: 0 5px; /* Espacio entre los botones */
 }
+
+#navigationButtons button:hover {
+    background-color: #ff69b4;
+}
+
