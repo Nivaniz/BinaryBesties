@@ -34,6 +34,11 @@
         <div class="question-section" id="section1">
             <label for="name">Nombre:</label><br>
             <input type="text" id="name" name="name" required>
+            
+            <div id="navigationButtons">
+                <button onclick="previousSection()">Atrás</button>
+                <button onclick="nextSection()">Siguiente</button>            
+            </div>
         </div>
 
         <div class="question-section" id="section2">
@@ -87,7 +92,13 @@
                     <option value="0.5">Muy Extrovertid@</option>
                 </select>
             </div>
+            <div id="navigationButtons">
+                <button onclick="previousSection()">Atrás</button>
+                <button onclick="nextSection()">Siguiente</button>            
+            </div>
         </div>
+
+
         <div class="question-section" id="section3">
             
             <div>
@@ -144,7 +155,12 @@
                     <option value="0.5">Mucho</option>
                 </select>
             </div>
+            <div id="navigationButtons">
+                <button onclick="previousSection()">Atrás</button>
+                <button onclick="nextSection()">Siguiente</button>            
+            </div>
         </div>
+
         <div class="question-section" id="section4">
             
             <div>
@@ -201,7 +217,12 @@
                     <option value="0.5">Mucho</option>
                 </select>
             </div>
+            <div id="navigationButtons">
+                <button onclick="previousSection()">Atrás</button>
+                <button onclick="nextSection()">Siguiente</button>            
+            </div>
         </div>
+
         <div class="question-section" id="section5">
             
             <div>
@@ -262,10 +283,7 @@
             <button id="submitButton" onclick="submitForm()">Enviar</button>
         </div>
 
-        <div id="navigationButtons">
-            <button onclick="previousSection()">Atrás</button>
-            <button onclick="nextSection()">Siguiente</button>
-        </div>
+        
     </form>
 
     <script src="assets/js/app.js" defer></script>

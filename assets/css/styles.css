@@ -150,8 +150,6 @@ nav a:hover::after {
     transition: background-color 0.3s ease;
     margin-right: auto;
     margin-top: 20px;
-    margin-left: 10px; /* Ajusta el margen izquierdo */
-    margin-bottom: 10px; /* Ajusta el margen inferior */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -169,6 +167,7 @@ nav a:hover::after {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    text-align: center;
 }
 
 #navigationButtons button {
