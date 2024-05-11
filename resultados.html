@@ -3,114 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/stylesresultados.css">
     <title>¡Felicidades!</title>
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            background-color: #f2f2f2; /* Color de fondo */
-            color: #333; /* Color de texto */
-        }
-
-        header {
-            background-color: #f2f2f2;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo img {
-            width: 100px; /* Ajusta el tamaño del logo */
-            height: auto;
-            margin-left: 10px; /* Ajusta el margen izquierdo */
-        }
-
-        nav {
-            display: flex;
-        }
-
-        nav a {
-            margin-right: 20px;
-            text-decoration: none;
-            color: #333;
-            position: relative;
-            font-weight: normal; /* Peso de la fuente en negrita */
-            font-size: 18px; /* Tamaño de la fuente */
-        }
-
-        nav a:hover {
-            font-weight: bold;
-        }
-
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background-color: transparent;
-            transition: background-color 0.3s ease;
-        }
-
-        nav a:hover::after {
-            background-color: #ff69b4;
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 36px; /* Tamaño de la fuente */
-            font-weight: bold; /* Peso de la fuente en negrita */
-        }
-
-        .nombre {
-            align-items: left;
-            font-size: 38px; /* Tamaño de fuente base */
-            font-weight: bold;
-            padding-bottom: 10px;
-            margin-top: 15px;
-        }
-
-        .redes {
-            align-items: left;
-            font-size: 28px;
-        }
-
-        .match {
-            margin-left: 450px;/* Centrar el contenedor horizontalmente */
-            width: 60%; /* Establecer un ancho del contenedor */
-            max-width: 800px; /* Establecer un ancho máximo */
-            font-size: 38px; /* Tamaño de fuente base */
-            font-weight: bold;
-        }
-
-        .profile-container {
-            margin: 20px auto;
-            width: calc(50% - 20px); /* Ancho del 100% del viewport menos 40px */
-            height: calc(50% - 20px); /* Ancho del 100% del viewport menos 40px */
-            background-color: #ffffff;
-            border-radius: 20px; /* Bordes más redondeados */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            display: flex;
-            align-items: center;
-        }
-
-        .profile-container img {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            margin-right: 20px;
-        }
-
-        .profile-details {
-            flex-grow: 1;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -124,16 +18,48 @@
     </header>
     <h1>¡Felicidades has terminado!</h1>
     <div>
-        <p class="match">Tu <span style="color: #FF4141;">match</span> match perfecto es: Miguel</p>
+        <p class="match">Tu <span style="color: #FF4141;">match</span> perfecto es: <strong id="nombre"></strong></p>
     </div>
     <div class="profile-container">
-        <img src="/assets/img/img2.jpg" alt="Foto de perfil de Miguel">
+        <img src="" alt="Foto de perfil de Miguel">
         <div class="profile-details">
-            <p class="nombre"><strong>Miguel</strong></p>
-            <p class="redes">Mándale un <span style="color: #4CAF50;">whatsapp</span> a: 442-186-9878</p>
-            <p class="redes">Escríbele a su <span style="color: #1877F2;">facebook</span> a: miguel_herrera</p>
-        </div>
+            <p class="nombre"><strong id="nombre"></strong></p>
+            <p class="redes">Mándale un <span style="color: #4CAF50;">whatsapp</span> a: <span id="whatsapp"></span></p>
+            <p class="redes">Escríbele a su <span style="color: #1877F2;">facebook</span> a: <a id="facebookLink" href="#"></a></p>
+        </div>        
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Obtener los parámetros de la URL
+            const params = new URLSearchParams(window.location.search);
+            const nombre = params.get('nombre');
+            const facebook = params.get('facebook');
+            const whatsapp = params.get('whatsapp'); // Nuevo parámetro
+            const img = params.get('img'); // Nuevo parámetro
+    
+            // Mostrar los resultados en tu página
+            document.getElementById('nombre').textContent = nombre;
+    
+            // Actualizar el nombre en ambos lugares
+            document.querySelectorAll('.nombre strong').forEach(element => {
+                element.textContent = nombre;
+            });
+    
+            // Actualizar el enlace de Facebook
+            const linkFacebook = document.getElementById('facebookLink');
+            linkFacebook.textContent = facebook;
+            linkFacebook.href = `https://www.facebook.com/${facebook}`;
+    
+            // Actualizar la imagen de perfil
+            const profileImg = document.querySelector('.profile-container img');
+            profileImg.src = img;
+    
+            // Actualizar el número de WhatsApp
+            const whatsappElement = document.getElementById('whatsapp');
+            whatsappElement.textContent = whatsapp;
+        });
+    </script>
+    
 </body>
 </html>
 

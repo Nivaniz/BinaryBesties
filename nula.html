@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Lo sentimos!</title>
+    <style>
+        html, body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            background-color: #f2f2f2; /* Color de fondo */
+            color: #333; /* Color de texto */
+            position: relative;
+        }
+        
+        header {
+            background-color: #f2f2f2;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo img {
+            width: 100px; /* Ajusta el tamaño del logo */
+            height: auto;
+            margin-left: 10px; /* Ajusta el margen izquierdo */
+        }
+        
+        .match-button {
+            padding: 15px 40px;
+            background-color: #F48ECD;
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            margin-right: auto;
+            margin-top: 40px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .match-button:hover {
+            background-color: #e84fad;
+        }
+
+        nav {
+            display: flex;
+        }
+        
+        nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #333;
+            position: relative;
+            font-weight: normal; /* Peso de la fuente en negrita */
+            font-size: 18px; /* Tamaño de la fuente */
+        }
+        
+        nav a:hover {
+            font-weight: bold;
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: transparent;
+            transition: background-color 0.3s ease;
+        }
+        
+        nav a:hover::after {
+            background-color: #ff69b4;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 36px; /* Tamaño de la fuente */
+            font-weight: bold; /* Peso de la fuente en negrita */
+            margin-top: 20px;
+            color: #ff69b4;
+        }
+
+        p {
+            font-weight: lighter;
+            font-size: 24px;
+            text-align: center;
+            margin-left: 250px; /* Quita el margen en todos los lados */ /* Quita el relleno en todos los lados */
+            margin-right: 250px;
+            color: black;
+        }
+        
+
+        .match {
+            text-align: center;
+            font-size: 18px;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .illustration {
+            position: relative;
+            height: 100vh; /* Toma el 100% del viewport */
+             /* Oculta el desbordamiento de la imagen */
+        }
+
+        .illustration img {
+            width: 1600px;
+            height: 800px;
+            position: absolute;
+            top: 0px;
+            margin-left: -50px;
+            z-index: 0; /* Coloca la imagen detrás del contenido */
+        }
+
+        .illustration .overlay {
+            width: 1600px;
+            height: 800px;
+            position: absolute;
+            top: 0px;
+            margin-left: -50px;
+            background-color: rgba(255, 255, 255, 0.7);
+            z-index: 1; /* Asegura que el overlay esté por encima de la imagen */
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.7); /* Overlay blanco con opacidad */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/img/logobinary.png" alt="BinaryBesties Logo">
+        </div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">¿Quiénes somos?</a>
+        </nav>
+    </header>
+    <div class="illustration">
+        <img src="assets/img/alone.jpg" alt="Ilustración de no match">
+        <div class="overlay"></div>
+        <div class="match">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h1>¡Has terminado el cuestionario!</h1><br>
+            <p>¡Felicidades por completar el cuestionario! Como dijo Martin Luther King Jr:<br><br>
+            "La vida más persistente y urgente es siempre la vida interior del alma humana". <br><br>
+            Recuerda que cada experiencia nos acerca más a encontrar a esa persona especial. Desafortunadamente, tu <span style="color: #FF4141;">match perfecto</span> no existe en nuestro banco de datos.</p>
+            <a href="main.html" class="match-button">Intentar de nuevo</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -50,6 +50,9 @@
                     <option value="0.3">26-33</option>
                     <option value="0.4">34-41</option>
                     <option value="0.5">42-49</option>
+                    <option value="0.6">50-57</option>
+                    <option value="0.7">58-65</option>
+                    <option value="0.8">Mayor de 65</option>
                 </select>
             </div>
             <br>
@@ -59,6 +62,7 @@
                     <option value="0.1">Femenino</option>
                     <option value="0.2">Masculino</option>
                     <option value="0.3">Otro</option>
+                    <option value="0.4">Prefiero no decir</option>
                 </select>
             </div>
             <br>
@@ -121,6 +125,7 @@
                     <option value="0.3">Dinero</option>
                     <option value="0.4">Trabajo</option>
                     <option value="0.5">Salud</option>
+                    <option value="0.6">Escuela</option>
                 </select>
             </div>
             <br>
@@ -205,6 +210,9 @@
                     <option value="0.3">Católico</option>
                     <option value="0.4">Mormón</option>
                     <option value="0.5">Protestante</option>
+                    <option value="0.6">Judaísmo</option>
+                    <option value="0.7">Agnóstico</option>
+                    <option value="0.8">Otro</option>
                 </select>
             </div>
             <br>
@@ -249,7 +257,7 @@
             </div>
             <br>
             <div>
-                <label for="friendshipImportance">¿Del 1 al 5 qué tanta importancia le das a las amistades?</label>
+                <label for="friendshipImportance">¿Del 1 al 5 qué tanta importancia le das a las amistades? (Siendo 1 nada y 5 mucho)</label>
                 <select id="friendshipImportance" name="friendshipImportance">
                     <option value="0.1">1</option>
                     <option value="0.2">2</option>
@@ -267,11 +275,12 @@
                     <option value="0.3">Hamsters o ratones</option>
                     <option value="0.4">Pájaros</option>
                     <option value="0.5">Otro</option>
+                    <option value="0.6">Ninguno</option>
                 </select>
             </div>
             <br>
             <div>
-                <label for="healthCareImportance">¿Del 1 al 5 qué tanta importancia le das a el cuidado de tu salud?</label>
+                <label for="healthCareImportance">¿Del 1 al 5 qué tanta importancia le das a el cuidado de tu salud? (Siendo 1 nada y 5 mucho)</label>
                 <select id="healthCareImportance" name="healthCareImportance">
                     <option value="0.1">1</option>
                     <option value="0.2">2</option>
@@ -326,12 +335,18 @@
             for (var i = 0; i < jsonData.length; i++) {
                 // Obtener los datos de la persona actual
                 var nombre = jsonData[i].nombre;
+                var facebook = jsonData[i].facebook;
+                var whatsapp = jsonData[i].whatsapp;
+                var img = jsonData[i].img;
                 var sumatoria = parseFloat(jsonData[i].sumatoria);
                 var resultados = jsonData[i].resultados;
 
                 // Crear un objeto con los datos de la persona
                 var persona = {
                     nombre: nombre,
+                    facebook: facebook,
+                    whatsapp: whatsapp,
+                    img: img,
                     sumatoria: sumatoria,
                     resultados: resultados
                 };
@@ -359,8 +374,9 @@
             sumaFormulario = roundSum(sumaFormulario);
 
             // Verificar compatibilidad
-            if (sumaFormulario >= 8.7 || sumaFormulario <= 5.5) {
+            if (sumaFormulario >= 8.7 || sumaFormulario <= 5.6) {
                 console.log('No hay compatibilidad con ninguna persona.');
+                window.location.href = 'nula.html';
                 return;
             }
 
@@ -379,8 +395,9 @@
 
             // Imprimir el resultado
             if (personaCercana) {
-                console.log('La persona más compatible es:', personaCercana.nombre);
-            } else {
+                console.log('La persona más compatible es:', personaCercana.nombre, personaCercana.facebook);
+                window.location.href = `resultados.html?nombre=${personaCercana.nombre}&facebook=${personaCercana.facebook}&whatsapp=${personaCercana.whatsapp}&img=${personaCercana.img}`;
+            } else if (personaCercana >= 5.6) {
                 console.log('No hay personas compatibles');
             }
         }
@@ -485,9 +502,6 @@
         // Llamar a la función para cargar y procesar el archivo JSON
         loadJSON();
     }
-
-    
-    
 
     </script>
     

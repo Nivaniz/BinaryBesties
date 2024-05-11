@@ -4,7 +4,7 @@
       "nombre": "María",
       "facebook": "María Pérez",
       "whatsapp": "555-123-4567",
-      "img": "enlace_default",
+      "img": "assets/img/maria.jpg",
       "sumatoria": 8.5,
       "resultados": [
         0.1,
@@ -34,7 +34,7 @@
       "nombre": "Juan",
       "facebook": "Juan García",
       "whatsapp": "555-234-5678",
-      "img": "enlace_default",
+      "img": "assets/img/juan.jpg",
       "sumatoria": 7.5,
       "resultados": [
         0.3,
@@ -64,7 +64,7 @@
       "nombre": "Ana",
       "facebook": "Ana Martínez",
       "whatsapp": "555-345-6789",
-      "img": "enlace_default",
+      "img": "assets/img/ana.jpg",
       "sumatoria": 6.3,
       "resultados": [
         0.4,
@@ -91,10 +91,10 @@
     },
     {
       "id": "4",
-      "nombre": "Luis",
+      "nombre": "Luisa",
       "facebook": "Luis López",
       "whatsapp": "555-456-7890",
-      "img": "enlace_default",
+      "img": "assets/img/luisa.jpg",
       "sumatoria": 8.0,
       "resultados": [
         0.5,
@@ -124,7 +124,7 @@
       "nombre": "Sofía",
       "facebook": "Sofía Rodríguez",
       "whatsapp": "555-567-8901",
-      "img": "enlace_default",
+      "img": "assets/img/sofia.jpg",
       "sumatoria": 7.1,
       "resultados": [
         0.3,
@@ -154,7 +154,7 @@
       "nombre": "Pablo",
       "facebook": "Pablo Hernández",
       "whatsapp": "555-678-9012",
-      "img": "enlace_default",
+      "img": "assets/img/pablo.jpg",
       "sumatoria": 7.7,
       "resultados": [
         0.7,
@@ -184,7 +184,7 @@
       "nombre": "Marta",
       "facebook": "Marta Díaz",
       "whatsapp": "555-789-0123",
-      "img": "enlace_default",
+      "img": "assets/img/marta.jpg",
       "sumatoria": 7.0,
       "resultados": [
         0.8,
@@ -214,7 +214,7 @@
       "nombre": "Javier",
       "facebook": "Javier Martín",
       "whatsapp": "555-890-1234",
-      "img": "enlace_default",
+      "img": "assets/img/javier.jpg",
       "sumatoria": 6.5,
       "resultados": [
         0.1,
@@ -244,7 +244,7 @@
       "nombre": "Elena",
       "facebook": "Elena Ruiz",
       "whatsapp": "555-901-2345",
-      "img": "enlace_default",
+      "img": "assets/img/elena.jpg",
       "sumatoria": 7.6,
       "resultados": [
         0.4,
@@ -274,11 +274,11 @@
       "nombre": "Carlos",
       "facebook": "Carlos Sánchez",
       "whatsapp": "555-012-3456",
-      "img": "enlace_default",
+      "img": "assets/img/carlos.jpg",
       "sumatoria": 7.8,
       "resultados": [
-        0.7,
-        0.1,
+        0.6,
+        0.2,
         0.2,
         0.3,
         0.4,
@@ -304,7 +304,7 @@
       "nombre": "Lucía",
       "facebook": "Lucía Gutiérrez",
       "whatsapp": "555-123-4567",
-      "img": "enlace_default",
+      "img": "assets/img/lucia.jpg",
       "sumatoria": 6.8,
       "resultados": [
         0.4,
@@ -334,7 +334,7 @@
       "nombre": "Diego",
       "facebook": "Diego Castro",
       "whatsapp": "555-234-5678",
-      "img": "enlace_default",
+      "img": "assets/img/diego.jpg",
       "sumatoria": 6.0,
       "resultados": [
         0.5,
@@ -364,7 +364,7 @@
       "nombre": "Martina",
       "facebook": "Martina Morales",
       "whatsapp": "555-345-6789",
-      "img": "enlace_default",
+      "img": "assets/img/martina.jpg",
       "sumatoria": 6.7,
       "resultados": [
         0.6,
@@ -394,11 +394,11 @@
       "nombre": "Sergio",
       "facebook": "Sergio Fernández",
       "whatsapp": "555-456-7890",
-      "img": "enlace_default",
+      "img": "assets/img/sergio.jpg",
       "sumatoria": 7.2,
       "resultados": [
-        0.7,
-        0.1,
+        0.4,
+        0.4,
         0.4,
         0.3,
         0.1,
@@ -424,7 +424,7 @@
       "nombre": "Laura",
       "facebook": "Laura Navarro",
       "whatsapp": "555-567-8901",
-      "img": "enlace_default",
+      "img": "assets/img/laura.jpg",
       "sumatoria": 7.3,
       "resultados": [
         0.8,
@@ -451,10 +451,10 @@
     },
     {
       "id": "16",
-      "nombre": "Pablo",
-      "facebook": "Pablo Sánchez",
+      "nombre": "Pedro",
+      "facebook": "Pedro Sánchez",
       "whatsapp": "555-678-9012",
-      "img": "enlace_default",
+      "img": "assets/img/pedro.jpg",
       "sumatoria": 5.7,
       "resultados": [
         0.1,
@@ -484,7 +484,7 @@
       "nombre": "Danna",
       "facebook": "Danna Jiménez",
       "whatsapp": "555-789-0123",
-      "img": "enlace_default",
+      "img": "assets/img/danna.jpg",
       "sumatoria": 6.1,
       "resultados": [
         0.3,
@@ -511,14 +511,14 @@
     },
     {
       "id": "18",
-      "nombre": "Manuel",
-      "facebook": "Manuel Pérez",
+      "nombre": "Yong",
+      "facebook": "Yong Pérez",
       "whatsapp": "555-890-1234",
-      "img": "enlace_default",
+      "img": "assets/img/yong.jpg",
       "sumatoria": 6.2,
       "resultados": [
-        0.3,
         0.1,
+        0.3,
         0.5,
         0.3,
         0.1,
@@ -541,14 +541,14 @@
     },
     {
       "id": "19",
-      "nombre": "Elena",
-      "facebook": "Elena López",
+      "nombre": "Karla",
+      "facebook": "Karla López",
       "whatsapp": "555-901-2345",
-      "img": "enlace_default",
+      "img": "assets/img/karla.jpg",
       "sumatoria": 5.8,
       "resultados": [
-        0.4,
         0.2,
+        0.4,
         0.1,
         0.1,
         0.4,
@@ -574,7 +574,7 @@
       "nombre": "David",
       "facebook": "David González",
       "whatsapp": "555-012-3456",
-      "img": "enlace_default",
+      "img": "assets/img/david.jpg",
       "sumatoria": 5.9,
       "resultados": [
         0.4,
