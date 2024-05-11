@@ -79,6 +79,7 @@
                     <option value="0.1">Estudiante</option>
                     <option value="0.2">Trabajador</option>
                     <option value="0.3">Desempleado</option>
+                    <option value="0.4">Estudiante y Trabajador</option>
                 </select>
             </div>
             <br>
@@ -281,6 +282,7 @@
             </div>
             <button onclick="previousSection()">Atrás</button>
             <button id="submitButton" onclick="submitForm()">Enviar</button>
+            <span id="sumatoria" style="display: none;"></span>
         </div>
 
         
@@ -293,6 +295,110 @@
         var submitButton = document.getElementById('submitButton');
         var backButton = document.querySelector('#navigationButtons button:first-of-type');
 
+        // Carga de json:
+        function loadJSON() {
+            // Ruta al archivo JSON
+            var jsonFilePath = 'basedatos.json';
+
+            // Realizar una solicitud HTTP GET para obtener el archivo JSON
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        // Cuando la solicitud se completa con éxito
+                        var jsonData = JSON.parse(xhr.responseText);
+                        processData(jsonData); // Procesar los datos JSON
+                    } else {
+                        console.error('Error al cargar el archivo JSON');
+                    }
+                }
+            };
+            xhr.open('GET', jsonFilePath, true);
+            xhr.send();
+        }
+
+        // Función para procesar los datos JSON
+        function processData(jsonData) {
+            // Arreglo para almacenar la información de cada persona
+            var personas = [];
+            
+            // Iterar sobre cada objeto en el arreglo JSON
+            for (var i = 0; i < jsonData.length; i++) {
+                // Obtener los datos de la persona actual
+                var nombre = jsonData[i].nombre;
+                var sumatoria = parseFloat(jsonData[i].sumatoria);
+                var resultados = jsonData[i].resultados;
+
+                // Crear un objeto con los datos de la persona
+                var persona = {
+                    nombre: nombre,
+                    sumatoria: sumatoria,
+                    resultados: resultados
+                };
+
+                // Agregar la persona al arreglo de personas
+                personas.push(persona);
+            }
+
+            // Imprimir el arreglo de personas en la consola
+            console.log('Arreglo de personas:', personas);
+
+            // Llamar a la función para comparar la suma del formulario con las sumas de las personas
+            compareSums(personas);
+        }
+
+        // Función para comparar la suma del formulario con las sumas de las personas
+        function compareSums(personas) {
+            if (!personas) {
+                console.error('No se han cargado los datos de las personas correctamente.');
+                return;
+            }
+
+            // Obtener la suma del formulario y redondearla según las reglas establecidas
+            var sumaFormulario = parseFloat(document.getElementById('sumatoria').textContent);
+            sumaFormulario = roundSum(sumaFormulario);
+
+            // Verificar compatibilidad
+            if (sumaFormulario >= 8.7 || sumaFormulario <= 5.5) {
+                console.log('No hay compatibilidad con ninguna persona.');
+                return;
+            }
+
+            // Inicializar variables para encontrar la persona más cercana
+            var diferenciaMinima = Infinity;
+            var personaCercana = null;
+
+            // Iterar sobre cada persona para encontrar la más cercana
+            personas.forEach(function(persona) {
+                var diferencia = Math.abs(persona.sumatoria - sumaFormulario);
+                if (diferencia < diferenciaMinima && diferencia <= 0.1) {
+                    diferenciaMinima = diferencia;
+                    personaCercana = persona;
+                }
+            });
+
+            // Imprimir el resultado
+            if (personaCercana) {
+                console.log('La persona más compatible es:', personaCercana.nombre);
+            } else {
+                console.log('No hay personas compatibles');
+            }
+        }
+
+        // Función para redondear la suma del formulario según las reglas establecidas
+        function roundSum(suma) {
+            if (suma == 8.2) {
+                return 8.0;
+            } else if (suma == 8.3) {
+                return 8.5;
+            }
+            return suma; // Devolver la suma sin cambios si no se cumple ninguna regla
+        }
+
+        // Llamar a la función para cargar y procesar el archivo JSON
+        loadJSON();
+
+        // Funcion para la página de siguiente
         function showSection(index) {
             for (var i = 0; i < sections.length; i++) {
                 if (i === index) {
@@ -329,12 +435,6 @@
             }
         }
 
-        function submitForm() {
-            // Aquí puedes agregar lógica para enviar el formulario
-            // Redirecciona a resultados.html
-            window.location.href = "resultados.html";
-        }
-
         // Mostrar la primera sección al cargar la página
         showSection(currentSectionIndex);
 
@@ -353,6 +453,42 @@
                 }
             });
         });
+    
+    // Enviar formulario
+    function submitForm() {
+        var selectElements = document.querySelectorAll('select'); // Obtener todos los elementos select
+        var values = [];
+    
+        // Iterar sobre cada elemento select
+        selectElements.forEach(function(select) {
+            var selectedValue = parseFloat(select.options[select.selectedIndex].value); // Obtener el valor numérico de la opción seleccionada y convertirlo a tipo float
+            values.push(selectedValue); // Guardar el valor seleccionado en el arreglo 'values'
+        });
+    
+        // Calcular la suma de los valores del arreglo
+        var suma = values.reduce(function(a, b) {
+            return a + b;
+        }, 0);
+    
+        // Construir el objeto con las propiedades sumatoria y resultados
+        var objetoResultado = {
+            sumatoria: suma.toFixed(2), // Redondear la suma a 2 decimales
+            resultados: values
+        };
+    
+        // Mostrar el objeto resultado en la consola
+        console.log(objetoResultado);
+    
+        // Actualizar el contenido del elemento con id 'sumatoria'
+        document.getElementById('sumatoria').textContent = suma.toFixed(2);
+    
+        // Llamar a la función para cargar y procesar el archivo JSON
+        loadJSON();
+    }
+
+    
+    
+
     </script>
     
 </body>

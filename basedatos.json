@@ -5,8 +5,9 @@
       "facebook": "María Pérez",
       "whatsapp": "555-123-4567",
       "img": "enlace_default",
+      "sumatoria": 8.5,
       "resultados": [
-        0.2,
+        0.1,
         0.3,
         0.4,
         0.3,
@@ -34,6 +35,7 @@
       "facebook": "Juan García",
       "whatsapp": "555-234-5678",
       "img": "enlace_default",
+      "sumatoria": 7.5,
       "resultados": [
         0.3,
         0.2,
@@ -63,6 +65,7 @@
       "facebook": "Ana Martínez",
       "whatsapp": "555-345-6789",
       "img": "enlace_default",
+      "sumatoria": 6.3,
       "resultados": [
         0.4,
         0.4,
@@ -92,6 +95,7 @@
       "facebook": "Luis López",
       "whatsapp": "555-456-7890",
       "img": "enlace_default",
+      "sumatoria": 8.0,
       "resultados": [
         0.5,
         0.1,
@@ -121,6 +125,7 @@
       "facebook": "Sofía Rodríguez",
       "whatsapp": "555-567-8901",
       "img": "enlace_default",
+      "sumatoria": 7.1,
       "resultados": [
         0.3,
         0.4,
@@ -150,6 +155,7 @@
       "facebook": "Pablo Hernández",
       "whatsapp": "555-678-9012",
       "img": "enlace_default",
+      "sumatoria": 7.7,
       "resultados": [
         0.7,
         0.3,
@@ -179,6 +185,7 @@
       "facebook": "Marta Díaz",
       "whatsapp": "555-789-0123",
       "img": "enlace_default",
+      "sumatoria": 7.0,
       "resultados": [
         0.8,
         0.1,
@@ -208,6 +215,7 @@
       "facebook": "Javier Martín",
       "whatsapp": "555-890-1234",
       "img": "enlace_default",
+      "sumatoria": 6.5,
       "resultados": [
         0.1,
         0.2,
@@ -237,6 +245,7 @@
       "facebook": "Elena Ruiz",
       "whatsapp": "555-901-2345",
       "img": "enlace_default",
+      "sumatoria": 7.6,
       "resultados": [
         0.4,
         0.3,
@@ -266,6 +275,7 @@
       "facebook": "Carlos Sánchez",
       "whatsapp": "555-012-3456",
       "img": "enlace_default",
+      "sumatoria": 7.8,
       "resultados": [
         0.7,
         0.1,
@@ -295,6 +305,7 @@
       "facebook": "Lucía Gutiérrez",
       "whatsapp": "555-123-4567",
       "img": "enlace_default",
+      "sumatoria": 6.8,
       "resultados": [
         0.4,
         0.4,
@@ -324,6 +335,7 @@
       "facebook": "Diego Castro",
       "whatsapp": "555-234-5678",
       "img": "enlace_default",
+      "sumatoria": 6.0,
       "resultados": [
         0.5,
         0.2,
@@ -353,6 +365,7 @@
       "facebook": "Martina Morales",
       "whatsapp": "555-345-6789",
       "img": "enlace_default",
+      "sumatoria": 6.7,
       "resultados": [
         0.6,
         0.3,
@@ -382,6 +395,7 @@
       "facebook": "Sergio Fernández",
       "whatsapp": "555-456-7890",
       "img": "enlace_default",
+      "sumatoria": 7.2,
       "resultados": [
         0.7,
         0.1,
@@ -411,6 +425,7 @@
       "facebook": "Laura Navarro",
       "whatsapp": "555-567-8901",
       "img": "enlace_default",
+      "sumatoria": 7.3,
       "resultados": [
         0.8,
         0.3,
@@ -440,6 +455,7 @@
       "facebook": "Pablo Sánchez",
       "whatsapp": "555-678-9012",
       "img": "enlace_default",
+      "sumatoria": 5.7,
       "resultados": [
         0.1,
         0.2,
@@ -469,6 +485,7 @@
       "facebook": "Danna Jiménez",
       "whatsapp": "555-789-0123",
       "img": "enlace_default",
+      "sumatoria": 6.1,
       "resultados": [
         0.3,
         0.3,
@@ -498,6 +515,7 @@
       "facebook": "Manuel Pérez",
       "whatsapp": "555-890-1234",
       "img": "enlace_default",
+      "sumatoria": 6.2,
       "resultados": [
         0.3,
         0.1,
@@ -527,6 +545,7 @@
       "facebook": "Elena López",
       "whatsapp": "555-901-2345",
       "img": "enlace_default",
+      "sumatoria": 5.8,
       "resultados": [
         0.4,
         0.2,
@@ -556,6 +575,7 @@
       "facebook": "David González",
       "whatsapp": "555-012-3456",
       "img": "enlace_default",
+      "sumatoria": 5.9,
       "resultados": [
         0.4,
         0.4,
