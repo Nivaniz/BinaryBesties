@@ -32,8 +32,23 @@
     <form id="surveyForm" onsubmit="return false">
 
         <div class="question-section" id="section1">
-            <label for="name">Nombre:</label><br>
+            <p style="text-align: center;"><strong><em>Los datos no serán guardados a menos que aceptes hacerlo al final del cuestionario</em></strong></p>
+ 
+        <div>
+            <label for="name">Escribe tu nombre:</label><br>
             <input type="text" id="name" name="name" required>
+        </div>
+        <br>
+        <div>
+            <label for="name">¿Cómo te encuentras en facebook?</label><br>
+            <input type="text" id="facebook" name="facebook" required>
+        </div>
+        <br>
+        <div>
+            <label for="name">¿Cuál es tu número de telefono?</label><br>
+            <input type="text" id="whatsapp" name="whatsapp" required>
+        </div>
+        <br>
             
             <div id="navigationButtons">
                 <button onclick="previousSection()">Atrás</button>
@@ -475,6 +490,8 @@
     function submitForm() {
         var selectElements = document.querySelectorAll('select'); // Obtener todos los elementos select
         var values = [];
+
+        var confirmation = confirm("¿Quieres guardar los datos en nuestra base de datos?");
     
         // Iterar sobre cada elemento select
         selectElements.forEach(function(select) {
